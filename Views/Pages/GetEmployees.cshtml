@@ -1,0 +1,57 @@
+﻿@model List<Employee>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6 text-start">
+            <h2>
+                <a class="btn btn-primary" asp-area="" asp-controller="Pages" asp-action="GetPositions">Show positions</a>
+            </h2>
+        </div>
+        <div class="col-6 text-end">
+            <h2>
+                <a class="btn btn-primary" asp-area="" asp-controller="Pages" asp-action="GetEmployees">Show employees</a>
+            </h2>
+        </div>
+    </div>
+
+    <table class="table table-bordered table-striped" style="width: 100%">
+        <thead>
+            <tr>
+                <th>
+                    Employee id
+                </th>
+                <th>
+                    Employee name
+                </th>
+                <th>
+                    Employee surname
+                </th>
+                <th>
+                    Position name
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th>
+                        @item.Id
+                    </th>
+                    <th>
+                        @item.Name
+                    </th>
+                    <th>
+                        @item.SurName
+                    </th>
+                    <th>
+                        @item.Position.Name
+                    </th>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>  

@@ -1,0 +1,56 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "AddEmployee";
+}
+
+<h1>AddEmployee</h1>
+
+<form asp-controller="Employees" asp-action="Add" method="post" id="myForm">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">
+                Create employee
+                <hr />
+            </h2>
+        </div>
+        <div asp-validation-summary="All"></div>
+        <div class="mb-3" id="errorEmptyPos">
+            Position must be not empty
+        </div>
+        <div class="mb-3">
+            <label asp-for="Name">
+                Name
+                <input asp-for="Name" class="form-control" />
+            </label>
+        </div>
+        <div class="mb-3">
+            <label asp-for="SurName">
+                Surname
+                <input asp-for="SurName" class="form-control" />
+            </label>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Position">
+                Position
+                <div class="input-group mb-3">
+                    <input asp-for="Position.Name" class="form-control" id="nPosition" placeholder="Название должности" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Create</button>
+                    <div id="positionCreatingGif">
+                        Loading
+                        <img src="~/hug.gif" width="30px" />
+                    </div>
+                </div> 
+            </label>
+        </div>
+        <div class="input-group mb-3" id="dFb">
+            <button type="submit" class="btn btn-primary" style="width: 100px" id="formButton">Add</button>
+            <div id="myGif">
+                Loading
+                <img src="~/hug.gif" width="30px" />
+            </div>
+        </div>
+        <a asp-controller="Pages" asp-action="Index" class="btn btn-secondary style=" width: 100px"">Back to list</a>
+    </div>
+</form>
+
+ 

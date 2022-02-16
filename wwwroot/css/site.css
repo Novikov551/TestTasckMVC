@@ -1,0 +1,75 @@
+html {
+    font-size: 100px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+#red {
+    color: red;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+}
+
+.form-group {
+    margin-top: 15px;
+}
+
+.ui-menu-item {
+    cursor: pointer;
+    user-select: none;
+    transition: 0.2s;
+}
+
+    .ui-menu-item:hover {
+        color: #ff6a00;
+    }
+
+.ui-helper-hidden-accessible {
+    display: none;
+}
+
+#myGif {
+    display: none;
+    margin-left: 30px;
+}
+
+#dFb {
+    display: flex;
+    align-items: center
+}
+
+#positionCreatingGif {
+    display: none;
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+#myForm2 {
+    position: absolute;
+    top: 56%;
+    margin-left: 30px;
+}
+
+
+#errorEmptyPos {
+    display: none;
+}
